@@ -57,7 +57,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &RamLlob
+  username               : &twitter
 facebook:
   username               :
   app_id                 :
@@ -109,7 +109,7 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : "RamLlob"
+  twitter          : "https://twitter.com/RamLlob"
   vine             :
   weibo            :
   xing             :
