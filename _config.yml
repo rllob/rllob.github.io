@@ -80,7 +80,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Ramses"
+  name             : #"Ramses"
   avatar           : "pic_profile.png"
   bio              : "Ph.D. candidate"
   location         : "Seattle (WA), USA"
