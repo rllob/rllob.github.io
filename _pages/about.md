@@ -10,7 +10,7 @@ redirect_from:
 
 
 
-Welcome to my website! I'm Ramses (like the pharaoh, ha!), originally from [Barcelona](https://en.wikipedia.org/wiki/Barcelona), Spain, and currently a Ph.D. student in the [Department of Political Science](https://www.polisci.washington.edu/) at the University of Washington in Seattle. 
+Welcome to my website! My name is Ramses (like the pharaoh, ha!), originally from [Barcelona](https://en.wikipedia.org/wiki/Barcelona), Spain, and currently a Ph.D. student in the [Department of Political Science](https://www.polisci.washington.edu/) at the University of Washington in Seattle. 
 
 My research interests are in political economy and statistical methods. In political economy, I broadly investigate inequality, redistribution, and wage determination in post-industrial societies, with a particular focus on industrial relations and labor market institutions. Although I have not yet initiated a research project in methodology, I have a broad interest in relative distributional methods, measurement models, machine learning, and panel data/multilevel methods. Concerning the latter, a specific topic I have been contemplating recently is whether Bayesian modeling techniques can provide better leverage than classical inference in estimating parameters from nearly time-invariant predictors and rarely changing outcomes in autoregressive panel models.
 
