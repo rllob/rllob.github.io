@@ -1,14 +1,14 @@
 ---
-title: "Teaching experience 1"
+title: "CS&SS 321 - Data Science and Statistics for Social Sciences"
 collection: teaching
 type: "Undergraduate course"
-permalink: /teaching/2014-spring-teaching-1
-venue: "University 1, Department"
-date: 2014-01-01
-location: "City, Country"
+permalink: /teaching/2024-spring-CS&SS321
+venue: "University of Washington"
+date: 2024
+location: "Seattle(WA), USA"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+This is post contains the section materials for an introductory course in data science using R/Rstudio.
 
 Heading 1
 ======
