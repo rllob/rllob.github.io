@@ -1,5 +1,5 @@
 ---
-title: "Teaching experience 1"
+title: "CS&SS 321 - Data Science and Statistics for Social Sciences I"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2014-spring-teaching-1
@@ -8,7 +8,8 @@ date: 2014-01-01
 location: "Seattle (WA), USA"
 ---
 
-This post contains materials for an undergraduate introductory course in data science with R/RStudio.
+
+This post comprises my teaching assistant materials for the quiz sections of an undergraduate introductory course in data science with R/RStudio, instructed by Professor [Caitlin Ainsley](https://www.caitlinainsley.com/).
 
 Heading 1
 ======
