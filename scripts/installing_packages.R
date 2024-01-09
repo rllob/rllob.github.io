@@ -1,8 +1,23 @@
 ## CSSS 321 - Data Science and Statistics for Social Sciences I 
-## Lab 0: Introduction and Installing R and R Studio
+## Introduction and Installing R and R Studio
 ## TA: Ramses Llobet - UW, Department of Political Science
 
 
+################################################################################
+############################### IMPORTANT NOTICE ###############################
+################################################################################
+
+# When install the necessary packages, please make sure to follow the ordering
+# of the lines from line 65 to 115. If you installed succesfully qss, you should
+# be able to run the tutorial 0 in line 109. Do the tutorial and export the
+# report in PDF file to ensure that you ahve succesfully installed tinytext
+
+################################################################################
+################################################################################
+################################################################################
+
+
+# Some basics in R:
 
 # <- notice the hash tag symbol '#', it allows you to "comment" the code
 # commented code can be run without being executed, for example
