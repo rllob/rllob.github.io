@@ -8,9 +8,9 @@
 ################################################################################
 
 # When install the necessary packages, please make sure to follow the ordering
-# of the lines from line 65 to 115. If you installed succesfully qss, you should
+# of the lines from line 65 to 115. If you installed successfully qss, you should
 # be able to run the tutorial 0 in line 109. Do the tutorial and export the
-# report in PDF file to ensure that you ahve succesfully installed tinytext
+# report in PDF file to ensure that you have successfully installed tinytext
 
 ################################################################################
 ################################################################################
@@ -20,7 +20,8 @@
 # Some basics in R:
 
 # <- notice the hash tag symbol '#', it allows you to "comment" the code
-# commented code can be run without being executed, for example
+# commented code can be run without being executed in the console
+# commenting your code is a good practice for future self-references
 
 
 # The keyboard shortcut to comment out a line is 
