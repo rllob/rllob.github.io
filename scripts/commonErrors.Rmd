@@ -2,10 +2,7 @@
 title: "Common errors"
 author: "Student name"
 date: "1/16/2024"
-output:
-  pdf_document:
-    latex_engine: pdflatex
-fontsize: 12pt
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
