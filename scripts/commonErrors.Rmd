@@ -25,13 +25,13 @@ Let's say, I create a new variable called `HispanOld` that takes the value of `T
 
 ```{r}
 
-#data$HispanOld <- ifelse(data$racename == "Hispanic" & data$age >= 60, TRUE, FALSE)
-#hoT.data <- subset(data, HispanOld == 1 & female == 1))
-#hoC.data <- subset(data, HispanOld == 1 & female == 0)
-#nhoT.data <- subset(data, Hispanold == 0 & female == 1)
-#nhoC.data <- subset(data, HispanOld = 0 & female == 0)
-#ho_diff <- mean(hoT.data$voted) - mean(hoC.dat$voted)
-#nho_diff <- mean(nhot.data$voted) - mean(nhoC.data$voted)
+data$HispanOld <- ifelse(data$racename == "Hispanic" & data$age >= 60, TRUE, FALSE)
+hoT.data <- subset(data, HispanOld == 1 & female == 1))
+hoC.data <- subset(data, HispanOld == 1 & female == 0)
+nhoT.data <- subset(data, Hispanold == 0 & female == 1)
+nhoC.data <- subset(data, HispanOld = 0 & female == 0)
+ho_diff <- mean(hoT.data$voted) - mean(hoC.dat$voted)
+nho_diff <- mean(nhot.data$voted) - mean(nhoC.data$voted)
 
 print(ho_dif)
 print(nho_diff)
