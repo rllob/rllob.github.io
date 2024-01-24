@@ -7,6 +7,8 @@ output: pdf_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE, error = FALSE)
 
+rm(list=ls())
+
 # load libraries
 
 library(dplyr)
@@ -31,7 +33,7 @@ Let's revisit several functions or concepts we've learnt from lectures and QSS t
 ```{r}
 # load data
 
-data <- read.csv()
+data <- read.csv("data/gapminder.csv")
 
 ```
 
@@ -49,12 +51,16 @@ Using the `tapply` function, please find:
 
 # 1.
 
+tapply(data$gdpPercap, data$continent, mean)
 
 # 2.
 
+tapply(data$gdpPercap, data$year, mean)
 
 # 3. in here you will need to use list()
 
+tapply(data$gdpPercap, list(data$year, 
+                            data$continent), mean)
 
 
 ```
@@ -73,15 +79,21 @@ Using `quantile` and `ifelse` function, please create:
 
 ```{r}
 # 1.
+gdp_qt <- quantile(data$gdpPercap)
 
+gdp_qt
 
 
 # 2.
+data$poverty <- ifelse(data$gdpPercap <= gdp_qt[2], 1, 0)
 
+table(data$poverty)
 
-# 3.
+sum(data$poverty)
 
+mean(data$poverty)
 
+# 3. 
 
 # 4.
 
@@ -97,18 +109,42 @@ How to inform `R` that `gdpPercap_cat` has an inherent order?
 
 2. Use `factor()` to convert `gdpPercap_cat` into factor, and specify the `levels = c(...)` argument. In the levels argument you will concatenate the four categories `poor`, `middle`, `wealthy`, and `very wealthy` in this order.
 
-3. Check out the class of `gdpPercap_cat` again.
+3. Check out the class of `gdpPercap_cat` again
 
-4. Use `tapply` to find the mean of `lifeExp` for each income group, based on `gdpPercap_cat`
+4. Use `tapply` to find the mean and standard deviation of `lifeExp` for each income group, based on `gdpPercap_cat`
 
 ```{r}
+# look at the class of gdpPercap_cat
+
+# Turn it into a factor with ordered levels
+
+# Look at the conditional mean of life expectancy by income group
+
+# Look at the conditional standard deviation of life expectancy by income group
 
 
 ```
 
 
 
+## Intro to ggplot
 
+Using `ggplot`, create two visualizations:
+
+  - A scatter plot between life expectancy (`lifeExp`) and income (`gdpPercap_cat`).
+  - A boxplot between life expectancy (`lifeExp`) and the categorical variable of income (`gdpPercap_cat`).
+
+What do you observe in terms of associations and dispersion of the distributions? Remember that you will need to load either the library of `ggplot2` or `tidyverse`.
+
+```{r}
+
+# create a scatter plot
+
+
+# create a boxplot
+
+
+```
 
 
 
