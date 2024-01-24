@@ -131,7 +131,7 @@ How to inform `R` that `gdpPercap_cat` has an inherent order?
 
 Using `ggplot`, create two visualizations:
 
-  - A scatter plot between life expectancy (`lifeExp`) and income (`gdpPercap_cat`).
+  - A scatter plot between life expectancy (`lifeExp`) and income (`gdpPercap`).
   - A boxplot between life expectancy (`lifeExp`) and the categorical variable of income (`gdpPercap_cat`).
 
 What do you observe in terms of associations and dispersion of the distributions? Remember that you will need to load either the library of `ggplot2` or `tidyverse`.
