@@ -1,13 +1,13 @@
 ---
 title: "Review on Causality"
-author: "Your Name"
+author: "Ramses Llobet"
 output: pdf_document
 ---
 
 ```{r setup, include=FALSE, warning=FALSE, error=FALSE, message=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 
-# celan memory
+# clean memory
 
 rm(list=ls())
 
@@ -62,20 +62,55 @@ First, load the data and ensure it is clean, if necessary. Rename variables and 
 ```{r}
 # load data
 
-nsw <- read.csv(file="")
+nsw <- read.csv(file="data/nsw.csv")
+
+names(nsw)
 
 # clean data
 
+freq.na(nsw) # are there any NAs?
+
+nsw$treat <- nsw$z
+
+nsw$treat_f <- factor(nsw$z,
+                      levels = c(0,1),
+                      labels=c("control","assignment"))
+
+nsw$black_f <- factor(nsw$black,
+                      levels = c(0,1),
+                      labels=c("non-black","black"))
+
+nsw$married_f <- factor(nsw$married,
+                      levels = c(0,1),
+                      labels=c("non-married","married"))
+
+nsw$nodegree_f <- factor(nsw$nodegree,
+                      levels = c(0,1),
+                      labels=c("nodegree","degree"))
 
 
-## proportion of black people
+## proportion of blacks
+
+mean(nsw$black)
+
+mean(nsw$black[nsw$treat==1]) - mean(nsw$black[nsw$treat==0])
+
 
 ## proportion of college educated
 
+mean(nsw$nodegree)
+
+mean(nsw$nodegree[nsw$treat==1]) - mean(nsw$nodegree[nsw$treat==0])
+
 ## proportion of married
+
+mean(nsw$married)
+
+mean(nsw$married[nsw$treat==1]) - mean(nsw$married[nsw$treat==0])
 
 ## balance on age
 
+median(nsw$age[nsw$treat==1]) - median(nsw$age[nsw$treat==0])
 
 
 ```
@@ -87,6 +122,9 @@ Second, report the correlation matrix of all the quantiative variables using the
 
 ```{r}
 
+round(
+  cor(nsw[,-c(1,13:16)]), digits = 2
+)
 
 ```
 
@@ -99,6 +137,9 @@ Third, generate a table displaying descriptive statistics for all variables exce
 
 # Note: to display LaTeX tables from stargazer in your knitted PDF you must set your code chunk with the option  -- results='asis' --
 
+stargazer(nsw[,-1], 
+          header = FALSE,
+          type = "latex") # change to type = "text" to display in the console
 
 ```
 
@@ -112,12 +153,68 @@ Moreover, create a scatter plot between the `re78` and `edu`, and make sure to d
 
 
 ```{r}
-
 ## visualize the age distribution by treatment group
+
+ 
+ggplot(data=nsw,
+       mapping = aes(x=age,
+                     group=treat_f,
+                     fill=treat_f)) +
+  geom_density(alpha=0.5) +
+  geom_vline(xintercept = median(nsw$age[nsw$treat==1]),
+             linetype="dashed") +
+  geom_vline(xintercept = median(nsw$age[nsw$treat==0]),
+             linetype="dashed")
+
+# histogram
+
+ggplot(data=nsw,
+       mapping = aes(x=age,
+                     group=treat_f,
+                     fill=treat_f)) +
+  geom_histogram(alpha=0.5)
+
+# histogram with density plot
+
+ggplot(data=nsw,
+       mapping = aes(x=age,
+                     group=treat_f)) +
+  geom_histogram(aes(y = after_stat(density)),
+                 alpha=0.5) +
+  geom_density(alpha=0.5) +
+  facet_wrap(~treat_f)
+
 
 
 # scatter plot
 
+
+ggplot(data=nsw,
+       mapping = aes(x=edu,
+                     y=re78,
+                     color=treat_f)) +
+  geom_point() +
+  theme_minimal()
+
+
+ggplot(data=nsw,
+       mapping = aes(x=edu,
+                     y=re78,
+                     color=treat_f)) +
+  geom_point() +
+  geom_smooth(method = "lm", se=FALSE) +
+  theme_minimal()
+
+
+ggplot(data=nsw,
+       mapping = aes(x=edu,
+                     y=re78,
+                     color=treat_f)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  coord_cartesian(ylim=c(0,20000)) +
+  facet_wrap(~treat_f) +
+  theme_classic()
 
 
 
@@ -136,6 +233,7 @@ Can we interpret this estimator as a causal effect? Why?
 
 ```{r}
 
+mean(nsw$re78[nsw$z==1]) - mean(nsw$re78[nsw$z==0])
 
 ```
 
@@ -151,7 +249,11 @@ re78_i & = \alpha + \beta_1 Z_i + \beta_2 edu_i + \beta_3 nodegree_i + e_i
 
 
 
+
 ```{r}
+
+m1 <- lm(re78 ~ treat_f, data=nsw)
+m2 <- lm(re78 ~ treat_f + edu + nodegree, data=nsw)
 
 
 ```
@@ -161,8 +263,12 @@ re78_i & = \alpha + \beta_1 Z_i + \beta_2 edu_i + \beta_3 nodegree_i + e_i
 
 # remember to set the code chunk option: 
 
+stargazer(m1,m2,
+          header = FALSE,
+          type="latex")  # change to type = "text" to display in the console
 
 ```
+
 
 
 
@@ -175,17 +281,20 @@ $$\text{DiD} = (\bar{Y}_{1T} - \bar{Y}_{1C}) - (\bar{Y}_{0T} - \bar{Y}_{0C})$$
 ```{r}
 
 # differences in means before the intervention:
+before <- mean(nsw$re75[nsw$z==1]) - mean(nsw$re75[nsw$z==0])
 
 # differences in means after the intervention:
+after <- mean(nsw$re78[nsw$z==1]) - mean(nsw$re78[nsw$z==0])
 
 # differences in differences:
+(DiD <- after - before)
 
 
 ```
 
 
-
 What is the **internal** and **external validity** of this experiment results?
+
 
 
 # 4. Parallel trends
@@ -199,8 +308,30 @@ Once the data is in long format, employ the `aggregate` function to estimate the
 You can find information on how to use these functions in my **Module 2** slides.
 
 
-
 ```{r}
+
+df_long <- nsw[,c("treat_f","re74","re75","re78")]
+
+df_long <- pivot_longer(df_long,
+                        cols=c("re74","re75","re78"),
+                        names_to = "year",
+                        values_to = "earnings")
+
+vis <- aggregate(earnings ~ year + treat_f, data=df_long, FUN=mean)
+
+
+
+ggplot(data=vis,
+       mapping=aes(x=year,
+                   y=earnings,
+                   group=treat_f,
+                   color=treat_f)) +
+  geom_line() +
+  geom_point() +
+  theme_bw() +
+  labs(x="Year") +
+  theme(legend.position = c(0.4, 0.8),
+        legend.title = element_blank()) 
 
 
 ```
