@@ -169,7 +169,7 @@ re78_i & = \alpha + \beta_1 Z_i + \beta_2 edu_i + \beta_3 nodegree_i + e_i
 Given the temporal dimension of this experiment, estimate a differences-in-differences estimator using `re75` to represent participants' earnings before the intervention and `re78` to represent earnings after the intervention. Under what assumptions this esitmator identifies a causal effect? Recall:
 
 
-$$\text{DiD} = (\bar{Y}_{1T} - \bar{Y}_{1C}) - (\bar{Y}_{0T} - \bar{Y}_{0C})$$
+$$\text{DiD} = [\bar{Y}(1)_{after} - \bar{Y}(0)_{after}] - [\bar{Y}(1)_{before} - \bar{Y}(0)_{before}]$$
 
 
 ```{r}
