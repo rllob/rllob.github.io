@@ -23,7 +23,7 @@ As the statistics department chair, you need to analyze the approval ratings (`a
 
 ```{r}
 # load data
-dat <- read.csv(file="data/bald_TA.csv")
+dat <- read.csv(file="data/approvalTA.csv")
 
 ```
 
