@@ -25,6 +25,7 @@ As the statistics department chair, you need to analyze the approval ratings (`a
 # load data
 dat <- read.csv(file="data/approvalTA.csv")
 
+names(dat)
 ```
 
 
@@ -47,6 +48,7 @@ Display the three model's results together using `stargazer()`. Remember to set 
 
 
 
+
 ```
 
 
@@ -57,21 +59,24 @@ Consider using stargazer for easier comparisons. What differences do you observe
 ```{r}
 
 
+
 ```
 
 
-Again, perhaps stargazer will make the comparisons easier. What do you see? Why are the results changing? How can you interpret these results in a consitent manner?
+Again, perhaps stargazer will make the comparisons easier. What do you see? Why are the results changing? How can you interpret these results in a consistent manner?
 
 ```{r,results='asis'}
 
 
+
+
 ```
 
 
-Finally, regress the following model:
+Now, estimate the following model:
 
 
-$$ approval_i = \alpha + \beta_1 age_i + \beta_2 soc_i + \beta_3 female_i + e_i$$
+$$ approval_i = \alpha + \beta_1 age_i + \beta_2 econ_i + \beta_3 female_i + e_i$$
 
 
 
@@ -83,7 +88,73 @@ $$ approval_i = \alpha + \beta_1 age_i + \beta_2 soc_i + \beta_3 female_i + e_i$
 
 ```{r,results='asis'}
 
+
 ```
+
+
+
+
+Finally, estimate the following model:
+
+
+$$ approval_i = \alpha + \beta_1 age_i + \beta_2 female_i + \beta_3 (age_i*female_i) + e_i$$
+
+Notice that $\beta_3$ represents an interaction effect. Interactions always require the estimation of the two (or more) variables interacting, including its lower order factors, $\beta_1$ and $\beta_2$
+
+
+
+```{r}
+
+
+
+```
+
+
+
+
+
+
+
+# Extra: poltting predictions
+
+
+*Note: This final section is optional and does not need to be submitted for earning participation points in this activity.*
+
+
+
+```{r}
+
+pred_female <-
+  data.frame(age=18:65,
+           female=1)
+
+pred_female$pred <- predict(m4, newdata = pred_female)
+
+
+pred_male <-
+  data.frame(age=18:65,
+           female=0)
+
+pred_male$pred <- predict(m4, newdata = pred_male)
+
+vis <- rbind(pred_female,pred_male)
+
+vis$pred <- round(vis$pred, digits = 3)
+
+vis$female_f <- factor(vis$female,
+                       levels = c(0,1),
+                       labels = c("male","female"))
+
+
+ggplot(data=vis,
+       aes(y=pred,
+           x=age,
+           color=female_f)) +
+  geom_line()
+
+
+```
+
 
 
 
