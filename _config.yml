@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "GTR Llobet"
+title                    : "Ramses Llobet"
 title_separator          : "-"
 name                     : &name "Ramses Llobet"
-description              : &description "personal description"
+description              : &description "Personal website of Ramses Llobet, Ph.D. candidate in political science at the University of Washington."
 url                      : https://rllob.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "rllob/rllob.github.io"
@@ -96,7 +96,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : #"rllob"
+  github           : "rllob"
   google_plus      :
   keybase          :
   instagram        :

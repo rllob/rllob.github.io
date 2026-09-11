@@ -13,5 +13,3 @@ paperurl: "https://rllob.github.io/files/llobet_political_naming_turkey.pdf"
 [Download the paper (PDF)](https://rllob.github.io/files/llobet_political_naming_turkey.pdf)
 
 This paper is my independent methodological contribution to a doctoral dissertation. The underlying data collection and the broader substantive project on naming and political resistance are joint work with Asli Cansunar, Can Bodrumlu, and Nela Mrchkovska.
-
-Recommended citation: Llobet Bentarif, Ramses. 2026. "Identifying the Diffusion and Suppression of Political Naming in Turkey with a Matched Interrupted Time Series Design." Working paper, University of Washington.
