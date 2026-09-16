@@ -14,6 +14,8 @@ The methodological contribution combines two comparisons with a model of geograp
 
 Deniz ranks first on the joint growth-and-contraction statistic among the forty-one names. Larger modeled contractions occur where the earlier increase was greater and prior support for the Turkish Workers' Party was stronger. Together, these patterns support a political interpretation, conditional on the trend projections, comparability of the selected names, and registry coverage. The records cannot establish individual parents' intentions or isolate the effects of particular events within each political episode.
 
-[Download the paper (PDF)](https://rllob.github.io/files/llobet_political_naming_turkey.pdf)
+**Read the paper below**, or open it in a new tab.
+
+{% include pdf-embed.html url="https://rllob.github.io/files/llobet_political_naming_turkey.pdf" label="Identifying the Diffusion and Suppression of Political Naming in Turkey" %}
 
 This paper is my independent methodological contribution to a doctoral dissertation. The underlying data collection and the broader substantive project on naming and political resistance are joint work with Asli Cansunar, Can Bodrumlu, and Nela Mrchkovska.

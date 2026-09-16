@@ -63,6 +63,40 @@
 }
 
 /* --------------------------------------------------------------------------
+   Inline PDF viewer. The object fills the content column and falls back to a
+   link where the browser cannot render a PDF, which is common on phones.
+   -------------------------------------------------------------------------- */
+.pdf-embed {
+  margin: 1.25em 0 0.6em;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  overflow: hidden;
+  background-color: $surface-color;
+
+  object {
+    display: block;
+    width: 100%;
+    height: 78vh;
+    min-height: 420px;
+    border: 0;
+  }
+}
+
+.pdf-embed__fallback {
+  margin: 0;
+  padding: 1em 1.2em;
+  font-size: $type-size-6;
+}
+
+.pdf-embed__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  margin: 0 0 1.6em;
+  font-size: $type-size-6;
+}
+
+/* --------------------------------------------------------------------------
    Split opening (preview B): name and intro left, portrait and links right.
    -------------------------------------------------------------------------- */
 .split-hero {

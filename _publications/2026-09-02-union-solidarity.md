@@ -14,4 +14,6 @@ Using ten rounds of the European Social Survey across twenty-six countries from 
 
 Building on established research linking union composition to solidarity, I also examine whose interests gain organizational voice. Broader representation of workers with low incomes accompanies larger membership differences in redistributive support and in rejection of large income differences as fair rewards for talent and effort. Organizational cases, including Germany's minimum wage campaign, examine how internal bargaining and communication turn insecure workers' demands into shared positions. This evidence connects the risk-based argument to the organizational processes through which solidarity can extend beyond members' immediate insurance needs.
 
-[Download the paper (PDF)](https://rllob.github.io/files/llobet_union_solidarity.pdf)
+**Read the paper below**, or open it in a new tab.
+
+{% include pdf-embed.html url="https://rllob.github.io/files/llobet_union_solidarity.pdf" label="Labor Union Solidarity, Occupational Risks, and Demand for Redistribution in Europe" %}
