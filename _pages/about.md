@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a Ph.D. candidate in the [Department of Political Science](https://www.polisci.washington.edu/) at the University of Washington, originally from [Barcelona](https://en.wikipedia.org/wiki/Barcelona), Spain. I am a comparative political economist and political methodologist, and I expect to complete my Ph.D. in June 2027.
+I am a Ph.D. candidate in the [Department of Political Science](https://www.polisci.washington.edu/) at the University of Washington, originally from [Barcelona](https://en.wikipedia.org/wiki/Barcelona), Spain. I am a comparative political economist and political methodologist, and I expect to complete my Ph.D. in the academic year 2026/2027.
 
 Substantively, I study the political economy of inequality and redistribution. Across countries, I ask how labor market institutions, welfare states, and technological change shape growth and inequality and distribute economic risk across the workforce. Within countries, I use survey data to ask how insecurity and inequality shape citizens' preferences over redistribution and their support for political parties, and how institutions moderate those preferences. Methodologically, I develop statistical methods and research designs for settings in which observed data imperfectly measure theoretical quantities or provide no obvious counterfactual comparison, including measurement error in grouped survey variables, interrupted time series designs without a control group, and Bayesian multilevel models for spatial and panel data.
 
