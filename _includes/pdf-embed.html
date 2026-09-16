@@ -11,7 +11,7 @@ paragraph inside when it does not, which is the common case on phones.
     <p class="pdf-embed__fallback">This browser cannot show the PDF here. <a href="{{ include.url }}">Open it in a new tab</a> instead.</p>
   </object>
 </div>
-<p class="pdf-embed__links">
-  <a href="{{ include.url }}" target="_blank" rel="noopener">Open in a new tab</a>
-  <a href="{{ include.url }}" download>Download a copy</a>
-</p>
+<ul class="pdf-embed__links">
+  <li><a href="{{ include.url }}" target="_blank" rel="noopener">View</a></li>
+  <li><a href="{{ include.url }}" download>Download</a></li>
+</ul>
