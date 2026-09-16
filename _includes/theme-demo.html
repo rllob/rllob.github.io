@@ -1,0 +1,58 @@
+{% include base_path %}
+
+<p class="theme-switch">
+  <span class="theme-switch__label">Compare</span>
+  {% if include.variant == "A-light" %}<span class="theme-switch__current">A light</span>{% else %}<a href="{{ base_path }}/themes/a-light/">A light</a>{% endif %}
+  {% if include.variant == "A-dark" %}<span class="theme-switch__current">A dark</span>{% else %}<a href="{{ base_path }}/themes/a-dark/">A dark</a>{% endif %}
+  {% if include.variant == "B-light" %}<span class="theme-switch__current">B light</span>{% else %}<a href="{{ base_path }}/themes/b-light/">B light</a>{% endif %}
+  {% if include.variant == "B-dark" %}<span class="theme-switch__current">B dark</span>{% else %}<a href="{{ base_path }}/themes/b-dark/">B dark</a>{% endif %}
+  <a href="{{ base_path }}/">Live site</a>
+</p>
+
+{% if include.layout == "split" %}
+<div class="split-hero">
+  <div class="split-hero__text">
+    <span class="split-hero__name">Ramses Llobet</span>
+    <p class="split-hero__role">Comparative political economist and political methodologist. Ph.D. expected June 2027, University of Washington.</p>
+    <p class="split-hero__links">
+      <a href="mailto:rllobet@uw.edu">Email</a>
+      <a href="https://github.com/rllob">GitHub</a>
+      <a href="{{ base_path }}/research/">Research</a>
+      <a href="{{ base_path }}/files/cv_academic.pdf">CV</a>
+    </p>
+  </div>
+  <div class="split-hero__media">
+    <img src="{{ base_path }}/images/pic_profile4.jpg" alt="Ramses Llobet">
+  </div>
+</div>
+{% endif %}
+
+<p>I am a Ph.D. candidate in the <a href="https://www.polisci.washington.edu/">Department of Political Science</a> at the University of Washington, originally from Barcelona, Spain. I am a comparative political economist and political methodologist, and I expect to complete my Ph.D. in June 2027.</p>
+
+<p>Substantively, I study the political economy of inequality and redistribution. Across countries, I ask how labor market institutions, welfare states, and technological change shape growth and inequality and distribute economic risk across the workforce. Within countries, I use survey data to ask how insecurity and inequality shape citizens' preferences over redistribution and their support for political parties, and how institutions moderate those preferences.</p>
+
+<p>I teach quantitative methods and comparative political economy, and I work as a statistical consultant at the <a href="https://csss.uw.edu/consulting">Center for Statistics and the Social Sciences</a>.</p>
+
+<h2>Research</h2>
+
+<div class="list__item">
+  <h3 class="archive__item-title"><a href="{{ base_path }}/research/union-solidarity/">Labor Union Solidarity, Occupational Risks, and Demand for Redistribution in Europe</a></h3>
+  <p class="page__meta">Working paper, under review</p>
+  <p class="archive__item-excerpt">Why union members support redistribution when their own need for insurance is limited, across ten rounds of the European Social Survey and twenty-six countries.</p>
+</div>
+
+<div class="list__item">
+  <h3 class="archive__item-title"><a href="{{ base_path }}/research/">Coarsened by Design: Measurement Error Bias from Grouped Variables in Interacted Regressions</a></h3>
+  <p class="page__meta">Working paper</p>
+  <p class="archive__item-excerpt">What happens when income is observed in brackets and used as a moderator, and how to correct the resulting bias.</p>
+</div>
+
+<div class="list__item">
+  <h3 class="archive__item-title"><a href="{{ base_path }}/research/political-naming-turkey/">Identifying the Diffusion and Suppression of Political Naming in Turkey with a Matched Interrupted Time Series Design</a></h3>
+  <p class="page__meta">Working paper</p>
+  <p class="archive__item-excerpt">A counterfactual built from forty matched names when a national shock leaves no unexposed region.</p>
+</div>
+
+<h2>Teaching</h2>
+
+<p>Since 2021 I have taught as a teaching assistant in twenty-two course offerings at the University of Washington and the ICPSR Summer Program. In Winter 2027 I will teach the introductory graduate methods course in political science.</p>

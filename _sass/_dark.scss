@@ -1,0 +1,114 @@
+/* ==========================================================================
+   DARK GROUND OVERRIDES
+
+   The theme hard-codes white into a handful of surfaces that no variable
+   reaches. This partial repaints them from the palette, and is imported only
+   by the dark theme builds.
+   ========================================================================== */
+
+/* Navigation panel that holds overflow links. */
+.greedy-nav .hidden-links {
+  background: $surface-color;
+
+  &:before {
+    border-color: $surface-color transparent;
+  }
+
+  a {
+    color: $text-color;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.greedy-nav {
+  background: $background-color;
+
+  button {
+    background-color: $primary-color;
+  }
+}
+
+/* Table of contents panel. */
+.toc {
+  background-color: $surface-color;
+  color: $dark-gray;
+}
+
+/* Author links panel in the sidebar. */
+.author__urls {
+  background: $surface-color;
+  border-color: $border-color;
+
+  &:before {
+    border-color: $border-color transparent;
+  }
+
+  &:after {
+    border-color: $surface-color transparent;
+  }
+
+  li {
+    color: $text-color;
+  }
+}
+
+/* The "Follow" button sits on the dark ground. */
+.btn--inverse {
+  background-color: $surface-color;
+  color: $text-color !important;
+  border-color: $border-color !important;
+}
+
+/* Hamburger icon on small screens. */
+.navicon,
+.navicon:before,
+.navicon:after {
+  background: $text-color;
+}
+
+/* Overlay behind the lightbox. */
+.page__hero--overlay {
+  background-color: $background-color;
+}
+
+/* Form controls and code samples. */
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+textarea,
+select {
+  background-color: $surface-color;
+  color: $text-color;
+  border-color: $border-color;
+}
+
+pre,
+code,
+.highlight pre {
+  background-color: $surface-color;
+  color: $text-color;
+}
+
+/* Footer band. */
+.page__footer {
+  background-color: $surface-color;
+  color: $dark-gray;
+
+  a {
+    color: $dark-gray;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+/* Images carry a soft edge instead of a bright halo. */
+.author__avatar img,
+.split-hero__media img {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}

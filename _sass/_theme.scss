@@ -1,10 +1,11 @@
 /* ==========================================================================
    THEME OVERRIDES
-   Added 2026-09-16 for the combination chosen in the theme studio: light
-   ground, ink and oxblood palette, Spectral headings with IBM Plex Sans text,
-   profile sidebar, hairline rules between entries, narrow measure.
-   Imported last in assets/css/main.scss, so everything here layers on the
-   AcademicPages defaults and can be removed in one line.
+
+   Added 2026-09-16 for the combinations chosen in the theme studio: hairline
+   rules between entries, a reading measure of about 64 characters, headings on
+   the chosen display face, and the split opening used by preview B.
+   Palette-agnostic: everything reads from the variables, so the same partial
+   serves the light and dark builds.
    ========================================================================== */
 
 /* Paper titles read as headings, not as sans-serif list labels. */
@@ -13,21 +14,30 @@
   font-weight: 600;
 }
 
-/* Section headings keep their rule, but in the warm border colour. */
 .page__content h2 {
   font-weight: 600;
 }
 
-/* Reading measure of roughly 64 characters. Wide objects opt out below. */
+/* Reading measure of roughly 64 characters, applied to text blocks so that
+   tables, figures and the hero keep the full column width. */
 .page__content {
-  max-width: 64ch;
+  > p,
+  > ul,
+  > ol,
+  > dl,
+  > blockquote {
+    max-width: 64ch;
+  }
 
   img,
   table,
-  figure,
-  .archive__item-teaser {
+  figure {
     max-width: 100%;
   }
+}
+
+.archive__item-excerpt {
+  max-width: 64ch;
 }
 
 /* Hairline rules between research and teaching entries. */
@@ -44,12 +54,93 @@
   }
 }
 
-/* The author rail sits on the page ground, separated by the same hairline. */
 .sidebar .author__name {
   font-family: $header-font-family;
 }
 
-/* Masthead: quiet links, accent on hover, matching the studio preview. */
 .masthead {
   background-color: $background-color;
+}
+
+/* --------------------------------------------------------------------------
+   Split opening (preview B): name and intro left, portrait and links right.
+   -------------------------------------------------------------------------- */
+.split-hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid $border-color;
+}
+
+.split-hero__text {
+  flex: 1 1 320px;
+  min-width: 0;
+}
+
+.split-hero__name {
+  display: block;
+  margin: 0 0 0.25em;
+  font-weight: 600;
+  font-family: $header-font-family;
+  font-size: $type-size-2;
+  line-height: 1.1;
+}
+
+.split-hero__role {
+  margin: 0 0 0.75em;
+  max-width: 48ch;
+  color: $dark-gray;
+}
+
+.split-hero__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin: 0;
+  font-size: $type-size-6;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.split-hero__media {
+  flex: 0 0 auto;
+}
+
+.split-hero__media img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid $primary-color;
+}
+
+/* --------------------------------------------------------------------------
+   Preview switcher, shown only on the theme preview pages.
+   -------------------------------------------------------------------------- */
+.theme-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin: 0 0 1.5em;
+  padding: 10px 14px;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  background-color: $surface-color;
+  font-size: $type-size-6;
+}
+
+.theme-switch__label {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $dark-gray;
+}
+
+.theme-switch__current {
+  font-weight: 600;
+  color: $primary-color;
 }

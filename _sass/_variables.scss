@@ -1,5 +1,9 @@
 /* ==========================================================================
    Variables
+
+   Palette and type variables carry !default so a theme entry point in
+   assets/css/ can set them before importing this file. See theme-a-light.scss
+   and its siblings, which build the same theme with a different palette.
    ========================================================================== */
 
 /*
@@ -13,14 +17,14 @@ $paragraph-indent           : false; // true, false (default)
 $indent-var                 : 1.3em;
 
 /* system typefaces */
-$serif                      : Georgia, Times, serif;
+$serif                      : Georgia, Times, serif !default;
 /* IBM Plex Sans leads the stack so the sidebar, masthead and archive titles,
    which reference $sans-serif directly, follow the chosen pairing. */
-$sans-serif                 : "IBM Plex Sans", -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+$sans-serif                 : "IBM Plex Sans", -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
 $monospace                  : Monaco, Consolas, "Lucida Console", monospace;
 
 /* sans serif typefaces */
-$sans-serif-narrow          : $sans-serif;
+$sans-serif-narrow          : $sans-serif !default;
 $helvetica                  : Helvetica, "Helvetica Neue", Arial, sans-serif;
 
 /* serif typefaces */
@@ -30,10 +34,11 @@ $bodoni                     : "Bodoni MT", serif;
 $calisto                    : "Calisto MT", serif;
 $garamond                   : Garamond, serif;
 $spectral                   : "Spectral", Georgia, Times, serif;
+$source-serif               : "Source Serif 4", Georgia, Times, serif;
 
-$global-font-family         : $sans-serif;
-$header-font-family         : $spectral;
-$caption-font-family        : $serif;
+$global-font-family         : $sans-serif !default;
+$header-font-family         : $spectral !default;
+$caption-font-family        : $serif !default;
 
 /* type scale */
 $type-size-1                : 2.441em;  // ~39.056px
@@ -48,23 +53,24 @@ $type-size-8                : 0.625em;  // ~10px
 
 /*
    Colors
-   Palette "ink and oxblood", light ground, chosen 2026-09-16.
+   Default palette: "ink and oxblood", light ground, chosen 2026-09-16.
    ========================================================================== */
 
-$gray                       : #6b5f59;   // warm neutral; the greys below derive from it
-$dark-gray                  : mix(#000, $gray, 40%);
-$darker-gray                : mix(#000, $gray, 60%);
-$light-gray                 : mix(#fff, $gray, 50%);
-$lighter-gray               : mix(#fff, $gray, 90%);
+$gray                       : #6b5f59 !default;   // warm neutral; greys below derive from it
+$dark-gray                  : mix(#000, $gray, 40%) !default;
+$darker-gray                : mix(#000, $gray, 60%) !default;
+$light-gray                 : mix(#fff, $gray, 50%) !default;
+$lighter-gray               : mix(#fff, $gray, 90%) !default;
 
-$body-color                 : #f6f2ed;
-$background-color           : #f6f2ed;
-$code-background-color      : #fbf7f2;
-$code-background-color-dark : $light-gray;
-$text-color                 : #1b1614;
-$border-color               : #e2d9d0;
+$body-color                 : #f6f2ed !default;
+$background-color           : #f6f2ed !default;
+$code-background-color      : #fbf7f2 !default;
+$code-background-color-dark : $light-gray !default;
+$text-color                 : #1b1614 !default;
+$border-color               : #e2d9d0 !default;
+$surface-color              : #ffffff !default;
 
-$primary-color              : #8e2f27;
+$primary-color              : #8e2f27 !default;
 $success-color              : #62c462;
 $warning-color              : #f89406;
 $danger-color               : #ee5f5b;
@@ -94,11 +100,11 @@ $xing-color                 : #006567;
 
 
 /* links */
-$link-color                 : $primary-color;
-$link-color-hover           : mix(#000, $link-color, 25%);
-$link-color-visited         : mix(#000, $link-color, 10%);
-$masthead-link-color        : $text-color;
-$masthead-link-color-hover  : $primary-color;
+$link-color                 : $primary-color !default;
+$link-color-hover           : mix(#000, $link-color, 25%) !default;
+$link-color-visited         : mix(#000, $link-color, 10%) !default;
+$masthead-link-color        : $text-color !default;
+$masthead-link-color-hover  : $primary-color !default;
 
 
 /*
@@ -137,12 +143,6 @@ $susy: (
   gutter-position: after,
   container: $large,
   global-box-sizing: border-box,
-  // debug: (
-  //   image: show,
-  //   color: blue,
-  //   output: overlay,
-  //   toggle: top right,
-  // ),
 );
 
 

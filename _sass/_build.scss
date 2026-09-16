@@ -1,0 +1,36 @@
+/* ==========================================================================
+   BUILD CHAIN
+
+   Everything the theme imports after breakpoint and variables. Kept in one
+   partial so assets/css/main.scss and each theme variant in assets/css/ build
+   the identical stylesheet from a different palette.
+   ========================================================================== */
+
+@import "mixins";
+@import "vendor/susy/susy";
+
+@import "reset";
+@import "base";
+
+@import "utilities";
+@import "animations";
+@import "tables";
+@import "buttons";
+@import "notices";
+@import "masthead";
+@import "navigation";
+@import "footer";
+@import "syntax";
+
+@import "forms";
+
+@import "page";
+@import "archive";
+@import "sidebar";
+@import "theme";
+
+@import "vendor/font-awesome/fontawesome";
+@import "vendor/font-awesome/solid";
+@import "vendor/font-awesome/brands";
+@import "vendor/magnific-popup/magnific-popup";
+@import "print";
