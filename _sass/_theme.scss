@@ -119,6 +119,16 @@
 }
 
 /* --------------------------------------------------------------------------
+   Masthead band (preview C): no profile rail, content in a centred column
+   under the site masthead.
+   -------------------------------------------------------------------------- */
+.theme-band {
+  max-width: 46rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --------------------------------------------------------------------------
    Preview switcher, shown only on the theme preview pages.
    -------------------------------------------------------------------------- */
 .theme-switch {
