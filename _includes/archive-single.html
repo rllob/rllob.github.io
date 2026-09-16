@@ -60,5 +60,9 @@
       <p>Read the paper: <a href="{{ post.paperurl }}"><u>open the PDF</u></a></p>
     {% endif %}
 
+    {% if post.posterurl %}
+      <p>Poster: <a href="{{ post.posterurl }}" target="_blank" rel="noopener"><u>view</u></a> &middot; <a href="{{ post.posterurl }}" download><u>download</u></a></p>
+    {% endif %}
+
   </article>
 </div>
