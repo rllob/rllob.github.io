@@ -1,0 +1,55 @@
+/* ==========================================================================
+   THEME OVERRIDES
+   Added 2026-09-16 for the combination chosen in the theme studio: light
+   ground, ink and oxblood palette, Spectral headings with IBM Plex Sans text,
+   profile sidebar, hairline rules between entries, narrow measure.
+   Imported last in assets/css/main.scss, so everything here layers on the
+   AcademicPages defaults and can be removed in one line.
+   ========================================================================== */
+
+/* Paper titles read as headings, not as sans-serif list labels. */
+.archive__item-title {
+  font-family: $header-font-family;
+  font-weight: 600;
+}
+
+/* Section headings keep their rule, but in the warm border colour. */
+.page__content h2 {
+  font-weight: 600;
+}
+
+/* Reading measure of roughly 64 characters. Wide objects opt out below. */
+.page__content {
+  max-width: 64ch;
+
+  img,
+  table,
+  figure,
+  .archive__item-teaser {
+    max-width: 100%;
+  }
+}
+
+/* Hairline rules between research and teaching entries. */
+.list__item {
+  padding-bottom: 1.25em;
+  border-bottom: 1px solid $border-color;
+
+  + .list__item {
+    padding-top: 1.25em;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+/* The author rail sits on the page ground, separated by the same hairline. */
+.sidebar .author__name {
+  font-family: $header-font-family;
+}
+
+/* Masthead: quiet links, accent on hover, matching the studio preview. */
+.masthead {
+  background-color: $background-color;
+}
