@@ -6,6 +6,7 @@ excerpt: "Why do union members support redistribution when their own need for in
 date: 2026-09-02
 venue: "Working paper"
 paperurl: "https://rllob.github.io/files/llobet_union_solidarity.pdf"
+posterurl: "https://rllob.github.io/files/llobet_union_solidarity_poster.pdf"
 ---
 
 Why do union members support redistribution when their own need for social insurance is limited? Research on income-dependent altruism explains how affluence makes redistribution for others more affordable. I extend this argument to occupational unemployment risk through a concept I call *risk-dependent altruism*: concern for more exposed workers can sustain support among those with little personal need for insurance. The distinction matters because having the resources to contribute and expecting to need protection are different dimensions of workers' material interests.
@@ -17,3 +18,12 @@ Building on established research linking union composition to solidarity, I also
 **Read the paper below**, or open it in a new tab.
 
 {% include pdf-embed.html url="https://rllob.github.io/files/llobet_union_solidarity.pdf" label="Labor Union Solidarity, Occupational Risks, and Demand for Redistribution in Europe" %}
+
+## Poster
+
+A one-page visual summary of the paper's design and main findings.
+
+<ul class="pdf-embed__links">
+  <li><a href="https://rllob.github.io/files/llobet_union_solidarity_poster.pdf" target="_blank" rel="noopener">View</a></li>
+  <li><a href="https://rllob.github.io/files/llobet_union_solidarity_poster.pdf" download>Download</a></li>
+</ul>

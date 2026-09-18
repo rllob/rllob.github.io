@@ -6,6 +6,7 @@ excerpt: "Can a newborn's name reveal political expression under repression? Usi
 date: 2026-09-01
 venue: "Working paper"
 paperurl: "https://rllob.github.io/files/llobet_political_naming_turkey.pdf"
+posterurl: "https://rllob.github.io/files/llobet_political_naming_turkey_poster.pdf"
 ---
 
 Can a newborn's name reveal political expression under repression? Deniz, the Turkish word for "sea," acquired a political association through the persecution and execution of the revolutionary Deniz Gezmiş. Using more than 28 million domestic birth records from 1960 to 1990, I examine the name's rise during the 1970s and contraction around the 1980 military coup. The challenge is to distinguish political expression from changing naming fashions when national political events leave no geographically unexposed comparison group.
@@ -19,3 +20,12 @@ Deniz ranks first on the joint growth-and-contraction statistic among the forty-
 {% include pdf-embed.html url="https://rllob.github.io/files/llobet_political_naming_turkey.pdf" label="Identifying the Diffusion and Suppression of Political Naming in Turkey" %}
 
 This paper is my independent methodological contribution to a doctoral dissertation. The underlying data collection and the broader substantive project on naming and political resistance are joint work with Asli Cansunar, Can Bodrumlu, and Nela Mrchkovska.
+
+## Poster
+
+A one-page visual summary of the paper's design and main findings.
+
+<ul class="pdf-embed__links">
+  <li><a href="https://rllob.github.io/files/llobet_political_naming_turkey_poster.pdf" target="_blank" rel="noopener">View</a></li>
+  <li><a href="https://rllob.github.io/files/llobet_political_naming_turkey_poster.pdf" download>Download</a></li>
+</ul>
