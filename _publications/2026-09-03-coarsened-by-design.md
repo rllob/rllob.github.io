@@ -19,8 +19,7 @@ Motivated by research on inequality and political behavior, the paper offers gui
 Earlier versions of the broader project were presented at the 2025 meetings of the European Political Science Association and the American Political Science Association. The poster below was presented at the 2026 Society for Political Methodology meeting (PolMeth XLIII), Michigan State University, July 2026, and reflects an earlier version combining the reconstruction and interaction questions.
 
 <ul class="pdf-embed__links">
-  <li><a href="https://rllob.github.io/files/llobet_coarsening_poster_polmeth2026.pdf" target="_blank" rel="noopener">View</a></li>
-  <li><a href="https://rllob.github.io/files/llobet_coarsening_poster_polmeth2026.pdf" download>Download</a></li>
+  <li><a href="https://rllob.github.io/files/llobet_coarsening_poster_polmeth2026.pdf" target="_blank" rel="noopener">View PDF</a></li>
 </ul>
 
 Draft available upon request.

@@ -26,6 +26,5 @@ This paper is my independent methodological contribution to a doctoral dissertat
 A one-page visual summary of the paper's design and main findings.
 
 <ul class="pdf-embed__links">
-  <li><a href="https://rllob.github.io/files/llobet_political_naming_turkey_poster.pdf" target="_blank" rel="noopener">View</a></li>
-  <li><a href="https://rllob.github.io/files/llobet_political_naming_turkey_poster.pdf" download>Download</a></li>
+  <li><a href="https://rllob.github.io/files/llobet_political_naming_turkey_poster.pdf" target="_blank" rel="noopener">View PDF</a></li>
 </ul>

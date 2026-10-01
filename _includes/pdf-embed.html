@@ -8,10 +8,9 @@ paragraph inside when it does not, which is the common case on phones.
 {% endcomment %}
 <div class="pdf-embed">
   <object data="{{ include.url }}#view=FitH" type="application/pdf" aria-label="{{ include.label | default: 'PDF' }}">
-    <p class="pdf-embed__fallback">This browser cannot show the PDF here. <a href="{{ include.url }}">Open it in a new tab</a> instead.</p>
+    <p class="pdf-embed__fallback">This browser cannot show the PDF here. <a href="{{ include.url }}" target="_blank" rel="noopener">Open it in a new tab</a> instead.</p>
   </object>
 </div>
 <ul class="pdf-embed__links">
-  <li><a href="{{ include.url }}" target="_blank" rel="noopener">View</a></li>
-  <li><a href="{{ include.url }}" download>Download</a></li>
+  <li><a href="{{ include.url }}" target="_blank" rel="noopener">View PDF</a></li>
 </ul>

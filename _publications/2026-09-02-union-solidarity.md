@@ -24,6 +24,5 @@ Building on established research linking union composition to solidarity, I also
 A one-page visual summary of the paper's design and main findings.
 
 <ul class="pdf-embed__links">
-  <li><a href="https://rllob.github.io/files/llobet_union_solidarity_poster.pdf" target="_blank" rel="noopener">View</a></li>
-  <li><a href="https://rllob.github.io/files/llobet_union_solidarity_poster.pdf" download>Download</a></li>
+  <li><a href="https://rllob.github.io/files/llobet_union_solidarity_poster.pdf" target="_blank" rel="noopener">View PDF</a></li>
 </ul>
